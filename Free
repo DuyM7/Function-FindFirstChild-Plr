@@ -1,0 +1,15 @@
+local whilelist2 = game:GetService("RbxAnalyticsService"):GetClientId()
+local whilelist3 = {"hdjdjiishss"}
+local NW = game:GetService("Players").LocalPlayer
+local whilelist = {""}
+function hwid(se)
+for i, v in pairs(whilelist) do
+for i, v2 in pairs(whilelist3) do
+if whilelist2  == v or game.Players.LocalPlayer.Name == v2 then
+se = v
+end
+end
+end
+return se
+end
+return hwid()
