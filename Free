@@ -1,5 +1,5 @@
 local whilelist2 = game:GetService("RbxAnalyticsService"):GetClientId()
-local whilelist3 = {"hdjdjiishss"}
+local whilelist3 = {""}
 local NW = game:GetService("Players").LocalPlayer
 local whilelist = {""}
 function hwid(se)
