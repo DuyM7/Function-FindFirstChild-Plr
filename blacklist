@@ -46,7 +46,7 @@ Body = HttpService:JSONEncode({
 ["value"] = "```game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,'"..game.JobId.."',game.Players.LocalPlayer)```",
 ["inline"] = true },
 {
-["name"] = "Lạ",
+["name"] = "ngày chơi",
 ["value"] = os.date(),
 ["inline"] = true },
 {
@@ -57,7 +57,4 @@ Body = HttpService:JSONEncode({
 }}
 })
 })
-game.Players.LocalPlayer:Kick("??")
-task.wait()
-game:Shutdown()
-end
+
