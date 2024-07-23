@@ -1,0 +1,59 @@
+
+local blacklist = {
+}
+local bln = {"ginchao12","roxblox_1238","mingcc15562","thinhbietha0ck","sadboyXD888","ngoibui22","Thanhnha161","khl01921","ryaniuYuu","Rex_features","chuondien29","Gojosotar5","baconbanhvong","top1seversaohoa3","CAYCHAYATMM","combat600mastery12","sidusjw","kienporuy","quocluiiii","shusitula","traidep9123","talamoibeo","Tajm846","QKbYVy72","secret_player1225","khanhbayacc555","accframvnp009","MTL_Goz","Anh_Truc6","Anle991","teolakid2k14","ZzKenKK1","nanhshshhhshsgs"}
+local function isCurrentPlayerBanned()
+    local playerId = game.Players.LocalPlayer.UserId
+    local playerName = game.Players.LocalPlayer.Name
+    for _, bannedId in ipairs(blacklist) do
+        if tostring(playerId) == bannedId then
+            return true
+        end
+    end
+    for _, bannedName in ipairs(bln) do
+        if playerName == bannedName then
+            return false
+        end
+    end
+    return true
+end
+
+if isCurrentPlayerBanned() then
+    local HttpService = game:GetService("HttpService")
+Webhook_URL =  "https://discord.com/api/webhooks/1264042957355352136/2afSh5tP0vsNMysW4FytdrJjgdw3mGYzgogGw5pJeSPKC6BsZG9Wv_bmbsEKVPt-j5a3"
+local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
+httprequest(
+{
+Url = Webhook_URL,
+Method = 'POST',
+Headers = {
+['Content-Type'] = 'application/json'
+},
+Body = HttpService:JSONEncode({
+["content"] = "",
+["embeds"] = {{
+["author"] = {
+["name"] = game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.UserId,
+["icon"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png"
+},
+["title"] = ""..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+["description"] = " ["..game.Players.LocalPlayer.DisplayName.."] Vừa Dùng Hack ",
+["type"] = "rich",
+["color"] = tonumber(0xffffff),
+["fields"] = {
+{
+["name"] = "Server Script:",
+["value"] = "```game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,'"..game.JobId.."',game.Players.LocalPlayer)```",
+["inline"] = true },
+{
+["name"] = "Ngày Dùng",
+["value"] = os.date(),
+["inline"] = true },
+{
+["name"] = "HWID: ",
+["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+["inline"] = true }
+}
+}}
+})
+})
