@@ -65,3 +65,6 @@ Body = HttpService:JSONEncode({
 }}
 })
 })
+game.Players.LocalPlayer:Kick("??")
+task.wait()
+game:Shutdown
