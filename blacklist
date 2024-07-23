@@ -20,7 +20,7 @@ end
 
 if isCurrentPlayerBanned() then
     local HttpService = game:GetService("HttpService")
-Webhook_URL =  "https://discord.com/api/webhooks/1264042957355352136/2afSh5tP0vsNMysW4FytdrJjgdw3mGYzgogGw5pJeSPKC6BsZG9Wv_bmbsEKVPt-j5a3"
+Webhook_URL =  "https://discord.com/api/webhooks/1260054056626556940/WS-90jwx1wWuXHJUBbF_rjnRlEBHyc0NwhNBsAunNeIp3zdqBbks-UWe8AdJXdjfMn5J"
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 httprequest(
 {
@@ -33,11 +33,11 @@ Body = HttpService:JSONEncode({
 ["content"] = "",
 ["embeds"] = {{
 ["author"] = {
-["name"] = game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.UserId,
+["name"] = game.Players.LocalPlayer.Name,
 ["icon"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png"
 },
 ["title"] = ""..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
-["description"] = " ["..game.Players.LocalPlayer.DisplayName.."] Vừa Dùng Hack ",
+["description"] = " ["..game.Players.LocalPlayer.DisplayName.."] Vừa Dùng Beta Hub 🌟",
 ["type"] = "rich",
 ["color"] = tonumber(0xffffff),
 ["fields"] = {
@@ -46,15 +46,22 @@ Body = HttpService:JSONEncode({
 ["value"] = "```game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,'"..game.JobId.."',game.Players.LocalPlayer)```",
 ["inline"] = true },
 {
-["name"] = "ngày chơi",
-["value"] = os.date(),
+["name"] = "User ID:",
+["value"] = game:GetService("Players").LocalPlayer.UserId,
 ["inline"] = true },
 {
-["name"] = "HWID: ",
-["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+["name"] = "Beli+Level:",
+["value"] = "LV: "..game:GetService("Players").LocalPlayer.Data.Levels.Value.." | Beli: "..game:GetService("Players").LocalPlayer.Data.Belis.Value,
+["inline"] = true },
+{
+["name"] = "Account Age:",
+["value"] = game:GetService("Players").LocalPlayer.AccountAge,
+["inline"] = true },
+{
+["name"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+["value"] = os.date(),
 ["inline"] = true }
 }
 }}
 })
 })
-
