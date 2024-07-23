@@ -20,7 +20,7 @@ end
 
 if isCurrentPlayerBanned() then
     local HttpService = game:GetService("HttpService")
-Webhook_URL =  "https://discord.com/api/webhooks/1260054056626556940/WS-90jwx1wWuXHJUBbF_rjnRlEBHyc0NwhNBsAunNeIp3zdqBbks-UWe8AdJXdjfMn5J"
+Webhook_URL =  "https://discord.com/api/webhooks/1264042957355352136/2afSh5tP0vsNMysW4FytdrJjgdw3mGYzgogGw5pJeSPKC6BsZG9Wv_bmbsEKVPt-j5a3"
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 httprequest(
 {
@@ -33,11 +33,11 @@ Body = HttpService:JSONEncode({
 ["content"] = "",
 ["embeds"] = {{
 ["author"] = {
-["name"] = game.Players.LocalPlayer.Name,
+["name"] = game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.UserId,
 ["icon"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png"
 },
 ["title"] = ""..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
-["description"] = " ["..game.Players.LocalPlayer.DisplayName.."] Vừa Dùng Beta Hub 🌟",
+["description"] = " ["..game.Players.LocalPlayer.DisplayName.."] Vừa Dùng Hack ",
 ["type"] = "rich",
 ["color"] = tonumber(0xffffff),
 ["fields"] = {
@@ -46,20 +46,12 @@ Body = HttpService:JSONEncode({
 ["value"] = "```game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,'"..game.JobId.."',game.Players.LocalPlayer)```",
 ["inline"] = true },
 {
-["name"] = "User ID:",
-["value"] = game:GetService("Players").LocalPlayer.UserId,
-["inline"] = true },
-{
-["name"] = "Beli+Level:",
-["value"] = "LV: "..game:GetService("Players").LocalPlayer.Data.Levels.Value.." | Beli: "..game:GetService("Players").LocalPlayer.Data.Belis.Value,
-["inline"] = true },
-{
-["name"] = "Account Age:",
-["value"] = game:GetService("Players").LocalPlayer.AccountAge,
-["inline"] = true },
-{
-["name"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+["name"] = "Lạ",
 ["value"] = os.date(),
+["inline"] = true },
+{
+["name"] = "HWID: ",
+["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
 ["inline"] = true }
 }
 }}
@@ -67,4 +59,5 @@ Body = HttpService:JSONEncode({
 })
 game.Players.LocalPlayer:Kick("??")
 task.wait()
-game:Shutdown
+game:Shutdown()
+end
