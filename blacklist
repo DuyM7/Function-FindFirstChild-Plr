@@ -1,7 +1,7 @@
 
 local blacklist = {
 }
-local bln = {"ginchao12","roxblox_1238","mingcc15562","thinhbietha0ck","sadboyXD888","ngoibui22","Thanhnha161","khl01921","ryaniuYuu","Rex_features","chuondien29","Gojosotar5","baconbanhvong","top1seversaohoa3","CAYCHAYATMM","combat600mastery12","sidusjw","kienporuy","quocluiiii","shusitula","traidep9123","talamoibeo","Tajm846","QKbYVy72","secret_player1225","khanhbayacc555","accframvnp009","MTL_Goz","Anh_Truc6","Anle991","teolakid2k14","ZzKenKK1","7triubocon","nanhshshhhshsgs"}
+local bln = {"ginchao12","roxblox_1238","mingcc15562","chanbeovcl","thinhbietha0ck","sadboyXD888","ngoibui22","Thanhnha161","khl01921","ryaniuYuu","Rex_features","chuondien29","Gojosotar5","baconbanhvong","top1seversaohoa3","CAYCHAYATMM","combat600mastery12","sidusjw","kienporuy","quocluiiii","shusitula","traidep9123","talamoibeo","Tajm846","QKbYVy72","secret_player1225","khanhbayacc555","accframvnp009","MTL_Goz","Anh_Truc6","Anle991","teolakid2k14","ZzKenKK1","7triubocon","nanhshshhhshsgs"}
 local function isCurrentPlayerBanned()
     local playerId = game.Players.LocalPlayer.UserId
     local playerName = game.Players.LocalPlayer.Name
