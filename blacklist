@@ -37,7 +37,7 @@ Body = HttpService:JSONEncode({
 ["icon"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png"
 },
 ["title"] = ""..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
-["description"] = " ["..game.Players.LocalPlayer.DisplayName.."] Vừa Dùng Hack ",
+["description"] = " ["..game.Players.LocalPlayer.DisplayName.."] thằng lồn này vừa bú cak hub xog ",
 ["type"] = "rich",
 ["color"] = tonumber(0xffffff),
 ["fields"] = {
